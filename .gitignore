@@ -1,0 +1,22 @@
+# Compiled files
+*.class
+target/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.settings/
+.project
+.classpath
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Application
+application-local.properties

@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: todo-api
+
+  # Base de données H2 (développement)
+  datasource:
+    url: jdbc:h2:mem:tododb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+
+server:
+  port: 8081
+
+# Configuration Swagger / OpenAPI
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+    display-request-duration: true
+  info:
+    title: "Todo API"
+    description: "API de gestion de tâches - Ligue Basketball Centrafrique"
+    version: "1.0.0"
